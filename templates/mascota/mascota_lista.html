@@ -1,0 +1,38 @@
+ {% include 'index.html' %}
+
+<div id="mascotaViewModel">
+
+	<div id="fb-root"></div>
+
+	{% if error%}
+	<div class="alert alert-dismissable alert-danger"
+		style="display: block;">{{error}}</div>
+	{% endif %} {% if message %}
+	<div class="alert alert-dismissable alert-success"
+		style="display: block;">{{message}}</div>
+	{% endif %}
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading">
+			<div class="row">
+			<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8">
+					<p>
+						<strong style="font-family: tahoma; font-size: 20px; margin-top: 2px">Mascotas</strong>
+					</p>
+				</div>
+			</div>
+		</div>
+					<div class="row">	
+		<div class="col-md-12" data-bind='simpleGrid: gridViewModel'> </div>
+		</div>
+			
+		
+	</div>
+</div>
+<script src="{{STATIC_URL}}js/models/mascota.js"></script>
+<script src="{{STATIC_URL}}js/viewmodels/vmMascota.js"></script>
+
+{% include 'index_end.html' %}

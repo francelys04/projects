@@ -1,0 +1,12 @@
+.logo {
+	display: block;
+	width: 100%;
+	height: 50%;
+}
+
+.logo img {
+	display: block;
+	position: absolute;
+	bottom: 25%;
+	left: 25%;
+}
